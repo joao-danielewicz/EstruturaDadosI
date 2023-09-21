@@ -21,21 +21,19 @@ while(continuar == true){
 			pilha.Push(Console.ReadLine());
 			break;
 		case 2:
-			try{	
-				string removida = pilha.Pop().ToString();
-				Console.WriteLine($"A String '{removida}' foi removida do topo da pilha.");
+			try{
+				
+				Console.WriteLine($"A String '{pilha.Peek()}' foi removida do topo da pilha.");
 			}catch(Exception e){
 				Console.WriteLine("Nenhuma String foi removida pois a pilha está vazia.");
 			}
 			break;
 		case 3:
-			string topo = pilha.Peek().ToString();
-			Console.WriteLine($"A String no topo da pilha é: {topo}");
+			Console.WriteLine($"A String no topo da pilha é: {pilha.Peek()}");
 			break;
 		case 4:
 			try{	
-				string removida = pilha.Pop().ToString();
-				pilha.Push(removida);
+				pilha.Push(pilha.Peek());
 				Console.WriteLine($"A pilha não está vazia.");
 			}catch(Exception e){
 				Console.WriteLine("A pilha está vazia.");
@@ -43,8 +41,7 @@ while(continuar == true){
 			break;
 		case 5:
 			try{	
-				string removida = pilha.Pop().ToString();
-				pilha.Push(removida);
+				pilha.Push(pilha.Peek());
 				foreach(string elemento in pilha){
 					Console.WriteLine(elemento);
 				}

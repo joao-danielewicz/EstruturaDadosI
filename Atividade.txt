@@ -1,0 +1,6 @@
+Atividade: escreva um programa que seja capaz de interagir com o usuário utilizando o Console.ReadLine e Console.WriteLine.
+Você deve solicitar ao usuário os pares de chave-valor para uma Hashtable que irá armazenar respectivamente CPF e nome.
+O programa deve:
+1 - Checar se a chave já foi inserida previamente
+2 - Realizar as devidas validações para evitar a interrupção por meio de exceção
+3 - Ao final, percorrer e exibir todos os dados inseridos pelo usuário na tela
