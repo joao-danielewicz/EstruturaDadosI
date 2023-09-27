@@ -26,6 +26,7 @@ while(continuar == true){
 				Console.WriteLine($"A String '{pilha.Peek()}' foi removida do topo da pilha.");
 			}catch(Exception e){
 				Console.WriteLine("Nenhuma String foi removida pois a pilha está vazia.");
+				Console.WriteLine($"Mensagem: {e.Message}");
 			}
 			break;
 		case 3:
@@ -37,6 +38,7 @@ while(continuar == true){
 				Console.WriteLine($"A pilha não está vazia.");
 			}catch(Exception e){
 				Console.WriteLine("A pilha está vazia.");
+				Console.WriteLine($"Mensagem: {e.Message}");
 			}
 			break;
 		case 5:
@@ -47,6 +49,7 @@ while(continuar == true){
 				}
 			}catch(Exception e){
 				Console.WriteLine("Não há nenhum elemento na pilha para ser impresso na tela.");
+				Console.WriteLine($"Mensagem: {e.Message}");
 			}
 			break;
 		default:

@@ -15,7 +15,8 @@ while(sair == false){
 	Console.WriteLine("3 - Verificar qual elemento está à frente da fila");
 	Console.WriteLine("4 - Imprimir todo o conteúdo da fila");
 	Console.WriteLine("5 - Verificar se a fila contém determinado elemento");
-    Console.WriteLine("6 - Sair");
+    Console.WriteLine("6 - Limpar a fila");
+    Console.WriteLine("7 - Sair");
 
     
     String opcao = Console.ReadLine()!;
@@ -52,6 +53,11 @@ while(sair == false){
                 Thread.Sleep(2500);
                 break;
             case "6":
+                fila.Clear();
+                Console.WriteLine("Todos os elementos da fila foram excluídos.");
+                Thread.Sleep(2500);
+                break;
+            case "7":
                 sair = true;
                 break;
             default:
