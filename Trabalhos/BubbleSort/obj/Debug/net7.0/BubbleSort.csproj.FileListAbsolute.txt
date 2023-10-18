@@ -1,0 +1,14 @@
+D:\Estrutura de Dados\EstruturaDadosI\Trabalhos\BubbleSort\bin\Debug\net7.0\BubbleSort.exe
+D:\Estrutura de Dados\EstruturaDadosI\Trabalhos\BubbleSort\bin\Debug\net7.0\BubbleSort.deps.json
+D:\Estrutura de Dados\EstruturaDadosI\Trabalhos\BubbleSort\bin\Debug\net7.0\BubbleSort.runtimeconfig.json
+D:\Estrutura de Dados\EstruturaDadosI\Trabalhos\BubbleSort\bin\Debug\net7.0\BubbleSort.dll
+D:\Estrutura de Dados\EstruturaDadosI\Trabalhos\BubbleSort\bin\Debug\net7.0\BubbleSort.pdb
+D:\Estrutura de Dados\EstruturaDadosI\Trabalhos\BubbleSort\obj\Debug\net7.0\BubbleSort.GeneratedMSBuildEditorConfig.editorconfig
+D:\Estrutura de Dados\EstruturaDadosI\Trabalhos\BubbleSort\obj\Debug\net7.0\BubbleSort.AssemblyInfoInputs.cache
+D:\Estrutura de Dados\EstruturaDadosI\Trabalhos\BubbleSort\obj\Debug\net7.0\BubbleSort.AssemblyInfo.cs
+D:\Estrutura de Dados\EstruturaDadosI\Trabalhos\BubbleSort\obj\Debug\net7.0\BubbleSort.csproj.CoreCompileInputs.cache
+D:\Estrutura de Dados\EstruturaDadosI\Trabalhos\BubbleSort\obj\Debug\net7.0\BubbleSort.dll
+D:\Estrutura de Dados\EstruturaDadosI\Trabalhos\BubbleSort\obj\Debug\net7.0\refint\BubbleSort.dll
+D:\Estrutura de Dados\EstruturaDadosI\Trabalhos\BubbleSort\obj\Debug\net7.0\BubbleSort.pdb
+D:\Estrutura de Dados\EstruturaDadosI\Trabalhos\BubbleSort\obj\Debug\net7.0\BubbleSort.genruntimeconfig.cache
+D:\Estrutura de Dados\EstruturaDadosI\Trabalhos\BubbleSort\obj\Debug\net7.0\ref\BubbleSort.dll

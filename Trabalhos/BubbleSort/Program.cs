@@ -2,7 +2,7 @@
 int[] valores = new int[] {5,1,4,2,8};
 int aux;
 
-Console.Write("Matriz desordenada:       ");
+Console.Write("Matriz desordenada:       | ");
 foreach(int valor in valores){
         Console.Write($"{valor} | ");
     }
@@ -13,7 +13,7 @@ Console.WriteLine("\n");
 
 // Condicional: se o item sendo comparado for menor que aquele que está acima, nada é feito. Caso contrário,
 // ele será guardado numa variável auxiliar, seu espaço original será ocupado por seu superior (que é menor),
-// e ele passará a ocupar a posição original + 1 (que antes pertencia ao numero menor).
+// e ele passará a ocupar a posição original + 1 (que antes pertencia ao número menor).
 
 for(int i=0; i<(valores.GetLength(0)); i++){
     for(int j=0; j<(valores.GetLength(0)-1); j++){
