@@ -14,15 +14,12 @@ Console.WriteLine("\n");
 // Condicional: se o item sendo comparado for menor que aquele que está acima, nada é feito. Caso contrário,
 // ele será guardado numa variável auxiliar, seu espaço original será ocupado por seu superior (que é menor),
 // e ele passará a ocupar a posição original + 1 (que antes pertencia ao número menor).
-int mudança = 0;
 for(int i=0; i<valores.GetLength(0); i++){
     for(int j=0; j<(valores.GetLength(0)-1); j++){
         if(valores[j]>valores[j+1]){
             aux = valores[j];
             valores[j] = valores[j+1];
-            valores[j+1] = aux;            
-
-            mudança++;
+            valores[j+1] = aux;           
 
             Console.Write($"Iteração {i+1}:               | ");
             foreach(int valor in valores){
@@ -31,9 +28,6 @@ for(int i=0; i<valores.GetLength(0); i++){
             Console.WriteLine();    
         }
 
-        if(mudança==0){
-            break;
-        }
     }
     Console.Write($"Iteração {i+1} completa:      | ");
     foreach(int valor in valores){
