@@ -59,15 +59,15 @@ foreach(int valor in valores){
 // A solução é criar uma variável que nos indica se uma mudança foi feita: a partir do momento que não houver nenhuma, os números estarão ordenados.
 // int[] valores = new int[];
 // int aux;
-// int mudança = 0;
+// int mudanca = 0;
 // for(int i=0; i<valores.GetLength(0); i++){
 //     for(int j=0; j<(valores.GetLength(0)-1); j++){
 //         if(valores[j]>valores[j+1]){
 //             aux = valores[j];
 //             valores[j] = valores[j+1];
 //             valores[j+1] = aux;            
-//             mudança++;
-//         if(mudança==0){
+//             mudanca++;
+//         if(mudanca==0){
 //             break;
 //         }
 //     }
