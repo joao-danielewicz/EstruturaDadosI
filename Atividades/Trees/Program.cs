@@ -1,49 +1,75 @@
-﻿using Trees;
-
-Tree<int> tree = new Tree<int>();
-
-// Inicia o nó com o valor 1000
-tree.Root = new TreeNode<int>() {
-    Data = 1000
-};
-
-// Reescreve Data no nó raíz
-tree.Root.Data = 100;
-
-// Informa carga de nós filhos
-tree.Root.Children = new List<TreeNode<int>> {
-    new TreeNode<int>() {
-        Data = 50,
-        Parent = tree.Root
-    },
-    new TreeNode<int>() {
-        Data = 5,
-        Parent = tree.Root
+﻿﻿public class TreeNode<T>
+{
+    public T Data { get; set; }
+    public TreeNode<T> Parent { get; set; }
+    public List<TreeNode<T>> Children { get; set; }
+    public int GetHeight()
+    {
+        int height = 1;
+        TreeNode<T> current = this;
+        while (current.Parent != null)
+        {
+            height++;
+            current = current.Parent;
+        }
+        return height;
     }
-};
-
-// Adicionando nó em tempo de execução
-TreeNode<int> filho3 = new TreeNode<int>();
-filho3.Data = 0;
-filho3.Parent = tree.Root;
-tree.Root.Children.Add(filho3);
-
-// Adicionando netos de Root, ou seja, filhos do primeiro nível de hereditariedade
-tree.Root.Children[0].Children = new List<TreeNode<int>> {
-    new TreeNode<int>() {
-        Data = 55,
-        Parent = tree.Root.Children[0]
+}
+public class Tree<T>
+{
+    public TreeNode<T> Root { get; set; }
+}
+public class Person
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Role { get; set; }
+    public Person(){}
+    public Person(int id, string name, string role)
+    {
+        Id = id;
+        Name = name;
+        Role = role;
     }
-};
+}
+public class Program
+{
+    static void Main()
+    {
+        Tree<Person> company = new Tree<Person>();
+        company.Root = new TreeNode<Person>()
+        {
+            Data = new Person(100, "Marcin Jamro", "CEO"),
+            Parent = null
+        };
 
-// Adicionando netos de Root no segundo filho
-TreeNode<int> neto2 = new TreeNode<int>();
-neto2.Data = 200;
-neto2.Parent = tree.Root.Children[1];
-tree.Root.Children[1].Children = new List<TreeNode<int>>();
-tree.Root.Children[1].Children.Add(neto2);
-
-
-int level = neto2.GetHeight();
-string message = $"Esta árvore contém {level} níveis";
-Console.WriteLine(message);
+        company.Root.Children = new List<TreeNode<Person>>()
+        {
+            new TreeNode<Person>()
+            {
+                Data = new Person(1, "John Smith", "Head of Development"),
+                Parent = company.Root
+            },
+            new TreeNode<Person>()
+            {
+                Data = new Person(50, "Maty Fox", "Head of Research"),
+                Parent = company.Root
+            },
+            new TreeNode<Person>()
+            {
+                Data = new Person(150, "Lily Smith", "Head of Sales"),
+                Parent = company.Root
+            }
+        };
+        company.Root.Children[2].Children = new List<TreeNode<Person>>()
+        {
+            new TreeNode<Person>()
+            {
+                Data = new Person(30, "Anthony Black", "Sales Specialist"),
+                Parent = company.Root.Children[2]
+            }
+        };
+        Console.WriteLine($"A ID do líder do setor de vendas é {company.Root.Children[2].Data.Id}.");
+        Console.WriteLine($"O nome do especialista do setor de vendas é {company.Root.Children[2].Children[0].Data.Name}.");
+    }
+}
