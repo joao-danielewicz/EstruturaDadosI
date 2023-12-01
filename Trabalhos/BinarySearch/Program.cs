@@ -43,7 +43,7 @@ String BinarySearch(int[] lista, int valor){
 
 
 int[] lista = {3, 7, 9, 15, 17, 24, 36, 38, 45};
-Console.WriteLine(BinarySearch(lista, 17));
+Console.WriteLine(BinarySearch(lista, 45));
 
 // 17, 36, 3, 45
 
